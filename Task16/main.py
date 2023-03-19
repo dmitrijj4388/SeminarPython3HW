@@ -11,19 +11,30 @@
 # Вывод: 2
 
 import random
-try:
 
-    n = int(input('Введите количество элементов: '))
-    x = int(input('Введите искомое число: '))
+def InputDigits():
+    
+    while True:
+        a = input()
+        if a.isdigit() == False:
+            print('Вы ввели не число')
+        else: 
+           break
+    return int(a)
 
-    array = [random.randint(1, n/2) for i in range(n)]
-    print(array)
-    count = 0
-    for i in array:
-        if i == x:
-            count +=1
-    print(f'Искомое число встпечается {count} раз')
-except:
-    print('Вы ввели не корректное число')
+print('Введите количество элементов: ')
+n = InputDigits()
+print('Введите искомое число: ')
+x = InputDigits()
+
+array = [random.randint(1, n/2) for i in range(n)]
+print(array)
+count = 0
+for i in array:
+    if i == x:
+        count +=1
+print(f'Искомое число встпечается {count} раз')
+
+  
 
 
