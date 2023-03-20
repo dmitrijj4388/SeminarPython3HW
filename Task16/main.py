@@ -24,7 +24,7 @@ def InputDigits():
 
 print('Введите количество элементов: ')
 n = InputDigits()
-print('Введите искомое число: ')
+
 x = InputDigits()
 
 array = [random.randint(1, n/2) for i in range(n)]
